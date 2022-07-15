@@ -1,3 +1,7 @@
+/**
+ * Time complexity - O(log n * 3n)
+ */
+
 function quick(array) {
   if (array.length <= 1) return array;
 
