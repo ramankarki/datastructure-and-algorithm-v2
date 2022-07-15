@@ -68,7 +68,11 @@ function maxConsecutive(array, n) {
   return maxSum;
 }
 
-console.log(maxConsecutive([1, 2, 5, 2, 8, 1, 5], 2)); // 10
-console.log(maxConsecutive([1, 2, 5, 2, 8, 1, 5], 4)); // 17
-console.log(maxConsecutive([4, 2, 1, 6], 1)); // 6
-console.log(maxConsecutive([4, 2, 1, 6, 2], 4)); // 13
+// console.log(maxConsecutive([1, 2, 5, 2, 8, 1, 5], 2)); // 10
+// console.log(maxConsecutive([1, 2, 5, 2, 8, 1, 5], 4)); // 17
+// console.log(maxConsecutive([4, 2, 1, 6], 1)); // 6
+// console.log(maxConsecutive([4, 2, 1, 6, 2], 4)); // 13
+
+/**
+ * Divide and conquer pattern
+ */
