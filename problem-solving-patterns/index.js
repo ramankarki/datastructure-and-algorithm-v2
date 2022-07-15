@@ -43,4 +43,32 @@ function pairZero(array) {
   }
 }
 
-console.log(pairZero([-2, -1, 0, 1, 3]));
+// console.log(pairZero([-2, -1, 0, 1, 3]));
+
+/**
+ * Sliding window pattern
+ */
+
+// Calculate the maximum sum of n consecutive elements in the array.
+
+function maxConsecutive(array, n) {
+  let maxSum = 0;
+  let tempSum = 0;
+
+  for (let i = 0; i < n; i++) {
+    maxSum += array[i];
+  }
+
+  tempSum = maxSum;
+  for (let i = 1; i < array.length; i++) {
+    tempSum = tempSum - array[i - 1] + array[i + n - 1];
+    if (tempSum > maxSum) maxSum = tempSum;
+  }
+
+  return maxSum;
+}
+
+console.log(maxConsecutive([1, 2, 5, 2, 8, 1, 5], 2)); // 10
+console.log(maxConsecutive([1, 2, 5, 2, 8, 1, 5], 4)); // 17
+console.log(maxConsecutive([4, 2, 1, 6], 1)); // 6
+console.log(maxConsecutive([4, 2, 1, 6, 2], 4)); // 13
