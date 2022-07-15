@@ -10,7 +10,7 @@ function quick(array) {
     else rightArr.push(array[i]);
   }
 
-  return [...quick(leftArr), select, ...quick(rightArr)];
+  return [...quick(leftArr), selected, ...quick(rightArr)];
 }
 
 console.log(quick([5, 6, 7, 8, 5, 4, 3, 2, 1, 4, 5, 6, 7, 8, 0]));
