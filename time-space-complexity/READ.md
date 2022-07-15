@@ -68,3 +68,14 @@ for (let a in array) {
   for (let a in array) {}
 }
 ```
+
+# Space complexity for data types
+
+## Most primitives types - O(1)
+
+- Boolean
+- Number
+- Undefined
+- Null
+
+## Strings, Arrays, Objects - O(n)
