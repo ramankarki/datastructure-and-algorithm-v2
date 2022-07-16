@@ -81,6 +81,65 @@ class LinkedList {
 
   /**
    *
+   * @param {number} index
+   */
+  get(index) {
+    let i = 0;
+    let activeNode = this.head;
+    while (activeNode && i !== index) {
+      activeNode = activeNode.next;
+      i++;
+    }
+    return activeNode;
+  }
+
+  /**
+   *
+   * @param {any} value
+   */
+  set(value, index) {
+    const activeNode = this.get(index);
+    if (!activeNode) return;
+    activeNode.value = value;
+    return activeNode;
+  }
+
+  insert(value, index) {
+    if (index === 0) {
+      return this.unshift(value);
+    }
+
+    let prev = this.head;
+    let activeNode = this.head.next;
+    let i = 1;
+
+    while (activeNode && i !== index) {
+      prev = prev.next;
+      activeNode = activeNode.next;
+      i++;
+    }
+
+    const node = new Node(value);
+    prev.next = node;
+    node.next = activeNode;
+    this.length++;
+    return node;
+  }
+
+  remove(index) {
+    if (index === 0) return this.shift();
+    if (index >= this.length - 1) return this.pop();
+
+    let activeNode = this.get(index - 1);
+    if (!activeNode) return;
+
+    let removed = activeNode.next;
+    activeNode.next = activeNode.next.next;
+    return removed;
+  }
+
+  /**
+   *
    * @param {any} value
    * @returns value, index
    */
@@ -114,5 +173,9 @@ const list = new LinkedList();
 
 list.push(3);
 list.push(5);
-console.log(list.push(7));
-console.log(list.unshift(9));
+list.push(7);
+list.unshift(9);
+
+list.insert(0, 5);
+console.log(list.remove(9));
+list.log();
