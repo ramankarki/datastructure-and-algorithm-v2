@@ -30,19 +30,20 @@ class LinkedList {
   }
 
   pop() {
-    if (!this.length) return;
+    if (!this.tail) return;
+
+    const removed = this.tail;
 
     if (this.length === 1) {
-      const removed = this.head;
       this.head = null;
       this.tail = null;
-      this.length = 0;
-      return removed;
+    } else {
+      this.tail = this.tail.prev;
+      this.tail.next = null;
     }
 
-    this.tail = this.tail.prev;
-    this.tail.next = null;
     this.length--;
+    return removed;
   }
 
   log() {
