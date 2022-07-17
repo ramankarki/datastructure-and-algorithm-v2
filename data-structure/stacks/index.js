@@ -1,5 +1,11 @@
 // Last in first out -> LIFO
 
+/*
+
+first <- second <- third <- ...n
+
+*/
+
 class Node {
   constructor(value) {
     this.value = value;
