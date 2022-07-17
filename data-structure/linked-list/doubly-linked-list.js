@@ -32,6 +32,14 @@ class LinkedList {
   pop() {
     if (!this.length) return;
 
+    if (this.length === 1) {
+      const removed = this.head;
+      this.head = null;
+      this.tail = null;
+      this.length = 0;
+      return removed;
+    }
+
     this.tail = this.tail.prev;
     this.tail.next = null;
     this.length--;
@@ -63,10 +71,8 @@ class LinkedList {
 const list = new LinkedList();
 
 list.push(5);
-list.push(4);
-list.push(3);
 
-list.pop();
+// list.pop();
 
 list.log();
 list.logReverse();
