@@ -105,9 +105,8 @@ class LinkedList {
   }
 
   insert(value, index) {
-    if (index === 0) {
-      return this.unshift(value);
-    }
+    if (index === 0) return this.unshift(value);
+    if (index >= this.length) return this.push(value);
 
     let prev = this.head;
     let activeNode = this.head.next;
@@ -157,6 +156,23 @@ class LinkedList {
     }
   }
 
+  reverse() {
+    let prev = null;
+    let current = this.head;
+    let next = current.next;
+
+    while (current) {
+      current.next = prev;
+      prev = current;
+      current = next;
+      next = next?.next;
+    }
+
+    let temp = this.head;
+    this.head = this.tail;
+    this.tail = temp;
+  }
+
   log() {
     let activeNode = this.head;
     let index = 0;
@@ -174,8 +190,9 @@ const list = new LinkedList();
 list.push(3);
 list.push(5);
 list.push(7);
-list.unshift(9);
-
+list.push(9);
+list.push(5);
 list.insert(0, 5);
-console.log(list.remove(9));
+
+list.reverse();
 list.log();
