@@ -36,6 +36,14 @@ class BSD {
       }
     }
   }
+
+  find(value, root = this.root) {
+    if (!root) return false;
+
+    if (root.value === value) return true;
+    else if (value < root.value) return this.find(value, root.left);
+    return this.find(value, root.right);
+  }
 }
 
 const bsd = new BSD();
@@ -47,3 +55,5 @@ bsd.insert(2);
 bsd.insert(4);
 
 console.log(bsd);
+
+console.log(bsd.find(5));
