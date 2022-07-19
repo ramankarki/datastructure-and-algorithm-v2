@@ -6,7 +6,7 @@ class Node {
   }
 }
 
-class BSD {
+class BST {
   coustructor() {
     this.root = null;
   }
@@ -46,14 +46,14 @@ class BSD {
   }
 }
 
-const bsd = new BSD();
+const bst = new BST();
 
-bsd.insert(5);
-bsd.insert(1);
-bsd.insert(3);
-bsd.insert(2);
-bsd.insert(4);
+bst.insert(5);
+bst.insert(1);
+bst.insert(3);
+bst.insert(2);
+bst.insert(4);
 
-console.log(bsd);
+console.log(bst);
 
-console.log(bsd.find(5));
+console.log(bst.find(5));
