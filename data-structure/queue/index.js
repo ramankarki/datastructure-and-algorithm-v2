@@ -36,10 +36,17 @@ class Queue {
   }
 
   shift() {
-    if (!this.first) return null;
+    let activeNode;
 
-    let activeNode = this.first;
-    this.first = this.first.next;
+    if (this.first === this.last) {
+      activeNode = this.first;
+      this.first = null;
+      this.last = null;
+    } else {
+      activeNode = this.first;
+      this.first = this.first.next;
+    }
+
     this.length--;
     return activeNode;
   }
@@ -56,19 +63,21 @@ class Queue {
   }
 }
 
-const queue = new Queue();
+module.exports = Queue;
 
-queue.push(1);
-queue.push(2);
-queue.push(3);
-queue.push(4);
-queue.push(5);
-queue.push(6);
-queue.log();
+// const queue = new Queue();
 
-console.log();
+// queue.push(1);
+// queue.push(2);
+// queue.push(3);
+// queue.push(4);
+// queue.push(5);
+// queue.push(6);
+// queue.log();
 
-queue.shift();
-queue.shift();
-queue.shift();
-queue.log();
+// console.log();
+
+// queue.shift();
+// queue.shift();
+// queue.shift();
+// queue.log();
