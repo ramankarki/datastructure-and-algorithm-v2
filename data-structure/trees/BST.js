@@ -46,6 +46,8 @@ class BST {
   }
 }
 
+module.exports = BST;
+
 const bst = new BST();
 
 bst.insert(5);
