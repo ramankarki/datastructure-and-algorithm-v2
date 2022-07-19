@@ -8,7 +8,7 @@
 
 <br>
 
-# BSD (Binary search tree)
+# BST (Binary Search Tree)
 
 - Every parent node has at most two children.
 - Every node to the left of a parent node is always lesser and greater at right.
