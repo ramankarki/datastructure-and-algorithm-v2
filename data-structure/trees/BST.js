@@ -48,14 +48,14 @@ class BST {
 
 module.exports = BST;
 
-const bst = new BST();
+// const bst = new BST();
 
-bst.insert(5);
-bst.insert(1);
-bst.insert(3);
-bst.insert(2);
-bst.insert(4);
+// bst.insert(5);
+// bst.insert(1);
+// bst.insert(3);
+// bst.insert(2);
+// bst.insert(4);
 
-console.log(bst);
+// console.log(bst);
 
-console.log(bst.find(5));
+// console.log(bst.find(5));
