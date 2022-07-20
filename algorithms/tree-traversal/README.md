@@ -23,7 +23,7 @@
 
 ## Types of DFS
 
-Use Stack
+Use Stack - Iteratively or Recursively
 
 ### PreOrder
 
@@ -42,3 +42,7 @@ Use Stack
 <br>
 
 ### InOrder
+
+- Visit all the left node.
+- Check the value of current node.
+- Visit all the right node.

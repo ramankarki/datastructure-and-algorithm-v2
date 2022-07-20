@@ -30,6 +30,19 @@ function PostOrder(root) {
   return data;
 }
 
+function InOrder(root) {
+  const data = [];
+
+  function stack(node) {
+    if (node.left) stack(node.left);
+    data.push(node.value);
+    if (node.right) stack(node.right);
+  }
+  stack(root);
+
+  return data;
+}
+
 const bst = new BST();
 
 bst.insert(10);
@@ -39,4 +52,4 @@ bst.insert(20);
 bst.insert(3);
 bst.insert(8);
 
-console.log(PostOrder(bst.root));
+console.log(InOrder(bst.root));
