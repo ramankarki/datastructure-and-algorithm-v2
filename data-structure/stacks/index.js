@@ -56,20 +56,22 @@ class Stack {
   }
 }
 
-const stack = new Stack();
+module.exports = Stack;
 
-stack.push(1);
-stack.push(2);
-stack.push(3);
-stack.push(4);
-stack.push(5);
-stack.push(5);
-stack.push(6);
-stack.log();
+// const stack = new Stack();
 
-console.log();
+// stack.push(1);
+// stack.push(2);
+// stack.push(3);
+// stack.push(4);
+// stack.push(5);
+// stack.push(5);
+// stack.push(6);
+// stack.log();
 
-stack.pop();
-stack.pop();
-stack.pop();
-stack.log();
+// console.log();
+
+// stack.pop();
+// stack.pop();
+// stack.pop();
+// stack.log();
