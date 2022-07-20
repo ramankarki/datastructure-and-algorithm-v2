@@ -17,6 +17,19 @@ function PreOrder(root) {
   return data;
 }
 
+function PostOrder(root) {
+  const data = [];
+
+  function stack(node) {
+    if (node.left) stack(node.left);
+    if (node.right) stack(node.right);
+    data.push(node.value);
+  }
+  stack(root);
+
+  return data;
+}
+
 const bst = new BST();
 
 bst.insert(10);
@@ -26,4 +39,4 @@ bst.insert(20);
 bst.insert(3);
 bst.insert(8);
 
-console.log(PreOrder(bst.root));
+console.log(PostOrder(bst.root));

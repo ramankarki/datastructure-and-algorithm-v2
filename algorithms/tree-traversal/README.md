@@ -6,6 +6,15 @@
 
 <br>
 
+- Use queue.
+- Start with pushing root node to queue.
+- Loop until queue is empty.
+  - Shift node from queue and check for its value.
+  - Push every child node to queue.
+  - Repeat.
+
+<br>
+
 ## DFS (Depth First Search)
 
 <img src="./DFS.png">
@@ -14,16 +23,22 @@
 
 ## Types of DFS
 
+Use Stack
+
 ### PreOrder
 
-- Start with the root node
-- Visit all the left node
+- Start with the root node and check its value.
+- Visit all the left node.
 - Visit all the right node.
 
 <br>
 
-### InOrder
+### PostOrder
+
+- Visit all the left node.
+- Visit all the right node.
+- Finally check the value of node and move from down to up.
 
 <br>
 
-### PostOrder
+### InOrder
