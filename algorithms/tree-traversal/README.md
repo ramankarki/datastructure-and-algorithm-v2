@@ -46,3 +46,41 @@ Use Stack - Iteratively or Recursively
 - Visit all the left node.
 - Check the value of current node.
 - Visit all the right node.
+
+<br>
+
+# Use case for BFS, DFS
+
+Time complexity for BFS and DFS is same. So we will look for space complexity.
+
+<br>
+
+### If tree is narrow, Consider BFS
+
+<img src="./BFS-usecase.png">
+
+<br>
+
+### If tree is wider, Consider DFS
+
+<img src="./DFS-usecase.png">
+
+<br>
+
+# Use case for PreOrder, PostOrder, InOrder
+
+## PreOrder
+
+It can be used to copy or re-construct new tree from old tree.
+
+<br>
+
+## PostOrder
+
+If we want to start looking from the leaves.
+
+<br>
+
+## InOrder
+
+It can be used to get sorted data with BST.
