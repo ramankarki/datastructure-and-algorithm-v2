@@ -12,8 +12,18 @@
 
 <br>
 
-### Types of DFS
+## Types of DFS
 
-- InOrder
-- PreOrder
-- PostOrder
+### PreOrder
+
+- Start with the root node
+- Visit all the left node
+- Visit all the right node.
+
+<br>
+
+### InOrder
+
+<br>
+
+### PostOrder
