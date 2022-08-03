@@ -25,6 +25,7 @@ class MaxHeap {
   }
 
   remove() {
+    const remove = this.value[0];
     this.value[0] = this.value.pop();
     let newRootIndex = 0;
 
@@ -32,18 +33,13 @@ class MaxHeap {
       let leftChildIndex = 2 * newRootIndex + 1;
       let rightChildIndex = 2 * newRootIndex + 2;
 
-      if (!this.value[leftChildIndex] || !this.value[rightChildIndex]) return;
-
-      if (
-        this.value[newRootIndex] > this.value[leftChildIndex] &&
-        this.value[newRootIndex] > this.value[rightChildIndex]
-      )
-        return;
+      if (!this.value[leftChildIndex] || !this.value[rightChildIndex])
+        return console.log(remove);
 
       if (this.value[newRootIndex] < this.value[leftChildIndex]) {
         this.swap(newRootIndex, leftChildIndex);
         newRootIndex = leftChildIndex;
-      } else {
+      } else if (this.value[newRootIndex] < this.value[rightChildIndex]) {
         this.swap(newRootIndex, rightChildIndex);
         newRootIndex = rightChildIndex;
       }
