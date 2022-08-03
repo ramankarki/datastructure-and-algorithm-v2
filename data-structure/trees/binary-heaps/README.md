@@ -4,6 +4,14 @@ Every left and right is filled before we move down and left children is filled o
 
 <br>
 
+## Time complexity
+
+### Insert, Remove - O(n \* log n)
+
+### Search - O(n)
+
+<br>
+
 ## Min heaps
 
 Parent node is always smaller than children node.
