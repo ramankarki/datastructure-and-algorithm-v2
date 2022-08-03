@@ -2,6 +2,8 @@
 
 Every left and right is filled before we move down and left children is filled out first.
 
+<br>
+
 ## Min heaps
 
 Parent node is always smaller than children node.
@@ -27,3 +29,9 @@ Binarh heaps are used to implement priority queues, which are very commonly used
 <br>
 
 <img src="./binary-heap-parent.png">
+
+<br>
+
+# Priority Queue
+
+A data structure where each element has a priority. Elements with higher priority are served before elements with lower priority.
