@@ -1,6 +1,6 @@
 // Unweighted - Undirected graph
 
-class Graph {
+class UnweightedGraph {
   constructor() {
     this.adjacencyList = {}
   }
@@ -36,9 +36,9 @@ class Graph {
   }
 }
 
-module.exports = Graph
+module.exports = UnweightedGraph
 
-const graph = new Graph()
+const graph = new UnweightedGraph()
 
 // graph.addNode('test')
 // graph.addNode('again')
