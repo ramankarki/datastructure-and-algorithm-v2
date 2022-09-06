@@ -36,18 +36,20 @@ class Graph {
   }
 }
 
+module.exports = Graph
+
 const graph = new Graph()
 
-graph.addNode('test')
-graph.addNode('again')
-graph.addNode('test1')
-graph.addEdge('test', 'again')
-graph.addEdge('again1', 'again')
-graph.addEdge('test', 'again1')
-graph.addEdge('test', 'again2')
+// graph.addNode('test')
+// graph.addNode('again')
+// graph.addNode('test1')
+// graph.addEdge('test', 'again')
+// graph.addEdge('again1', 'again')
+// graph.addEdge('test', 'again1')
+// graph.addEdge('test', 'again2')
 
-console.log(graph)
+// console.log(graph)
 
-graph.removeNode('test')
+// graph.removeNode('test')
 
-console.log(graph)
+// console.log(graph)
