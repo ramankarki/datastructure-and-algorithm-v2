@@ -11,6 +11,23 @@ function dfs(graph, node, visited = {}) {
   })
 }
 
+function dfsItr(graph, node) {
+  const stack = [node]
+  const visited = {}
+
+  while (stack.length) {
+    const currentNode = stack.pop()
+    if (visited[currentNode]) continue
+
+    console.log(currentNode)
+    visited[currentNode] = true
+    const currentArr = graph.adjacencyList[currentNode]
+    for (let i = currentArr.length - 1; i >= 0; i--) {
+      stack.push(currentArr[i])
+    }
+  }
+}
+
 const graph = new Graph()
 
 graph.addNode('test')
@@ -24,6 +41,12 @@ graph.addEdge('test', 'again2')
 graph.addEdge('10', 'again2')
 graph.addEdge('10', 'test1')
 
-console.log(graph)
+// console.log(graph, '\n')
 
+const t = performance.now()
 dfs(graph, 'test')
+console.log('Recursive', performance.now() - t, '\n')
+
+const t1 = performance.now()
+dfsItr(graph, 'test')
+console.log('Iterative', performance.now() - t1)
