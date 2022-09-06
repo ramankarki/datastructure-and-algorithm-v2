@@ -25,6 +25,6 @@ graph.addEdge('A', 'B', 9)
 graph.addEdge('A', 'C', 5)
 graph.addEdge('B', 'C', 7)
 
-console.log(graph)
+// console.log(graph)
 
 module.exports = WeightedGraph
